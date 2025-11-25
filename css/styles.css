@@ -1,0 +1,228 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, 'Segoe UI', sans-serif;
+}
+
+/* Wrapper */
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* === Header & logo === */
+header {
+  background-color: blue;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* Mobil */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem 0 1rem 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 40px;
+  width: 40px;
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.logo-sub {
+  font-size: 0.8rem;
+  color: white;
+}
+
+/* === Navigation === */
+
+nav#main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+nav#main-nav a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: white;
+  padding: 0.4rem 0;
+  position: relative;
+  display: inline-block;
+}
+
+nav#main-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.1rem;
+  width: 0;
+  height: 2px;
+  border-radius: 999px;
+  background-color: lightblue;
+}
+
+nav#main-nav li:hover > a,
+nav#main-nav a:focus-visible {
+  color: lightblue;
+}
+
+nav#main-nav li:hover > a::after,
+nav#main-nav a:focus-visible::after {
+  width: 100%;
+}
+
+/* Submenu */
+nav#main-nav li {
+  position: relative;
+}
+
+nav#main-nav .submenu {
+  list-style: none;
+  margin: 0.15rem 0 0;
+  padding-left: 1rem;
+}
+
+nav#main-nav .submenu li a {
+  display: block;
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+/* === Footer  === */
+
+footer {
+  margin-top: 3rem;
+  padding: 1.8rem 0 2rem;
+  background-color: #0f172a;
+  color: #e5e7eb;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.footer-col {
+  font-size: 0.85rem;
+  max-width: 100%;
+}
+
+.footer-col h4 {
+  margin-top: 0;
+  font-size: 0.95rem;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.3rem 0 0;
+}
+
+.footer-col a {
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+.footer-col a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 1.4rem;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.fun-line {
+  font-style: italic;
+  color: #e2e8f0;
+  margin: 0.6rem 0;
+  opacity: 0.9;
+}
+
+/* =========================================================
+   STÖRRE SKÄRMAR – DESKTOP / TABLET
+   =======================================================*/
+
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0 1.4rem 0;
+  }
+
+  nav#main-nav ul {
+    flex-direction: row;
+    gap: 1.2rem;
+  }
+
+  /* Submenu som dropdown */
+  nav#main-nav .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: blue;
+    padding: 0.3rem 0;
+    margin: 0;
+    display: none;
+    min-width: 150px;
+  }
+
+  nav#main-nav li:hover > .submenu {
+    display: block;
+  }
+
+  nav#main-nav .submenu li a {
+    padding: 0.4rem 0.8rem;
+  }
+
+  .footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer-col {
+    max-width: 260px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    padding-bottom: 2rem;
+  }
+}
