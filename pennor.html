@@ -1,36 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Pennor för kontor: kulspetspennor, markers, whiteboardpennor och fineliners. Prisvärda alternativ för företag och arbetsplatser."
-    />
     <title>Pennor | Kontorsmaterial för företag | Proffs & Papper</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/pages/produkter.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png" />
+    <script src="javascript/nav.js" defer></script>
   </head>
-  <body>
-    <header>
-      <div class="wrapper header">
-        <a href="index.html" class="logo">
-          <img src="images/logo.svg" alt="Proffs & Pappers logotyp" />
-          <div>
-            <div class="logo-text">Proffs & Papper</div>
-            <div class="logo-sub">
-              Kontorsmaterial för proffs – och för alla glada hjältar i vardagen
-            </div>
-          </div>
+  <body id="top" class="page-section pennor-page">
+    <a class="skip-link" href="#content">Hoppa till innehåll</a>
+    <header class="site-header">
+      <div class="l-wrapper site-header__wrapper">
+        <a href="./" class="brand brand--header brand__logo">
+          <img
+            src="images/logo.svg"
+            alt="Proffs och Papper – Kontorsmaterial för proffs och vardagshjältar"
+            width="100"
+            height="100"
+          />
+          <span class="brand__logo-text-wrap">
+            <span class="brand__logo-text">Proffs och Papper</span>
+
+            <span class="brand__logo-sub">
+              <span class="tagline tagline--sm"
+                >Kontorsmaterial för proffs</span
+              >
+              <span class="tagline tagline--md"
+                >Kontorsmaterial för proffs och vardagshjältar</span
+              >
+              <span class="tagline tagline--lg"
+                >Kontorsmaterial för proffs och glada vardagshjältar</span
+              >
+            </span>
+          </span>
         </a>
+        <span class="flex-spacer" aria-hidden="true"></span>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-controls="main-nav"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Öppna meny</span>
+          <span aria-hidden="true" class="burger">
+            <span></span><span></span><span></span>
+          </span>
+        </button>
+
         <nav id="main-nav">
           <ul>
-            <li><a href="index.html">Start</a></li>
+            <li><a href="./">Start</a></li>
             <li><a href="nyheter.html">Nyheter</a></li>
-            <li>
+            <li class="has-submenu is-active">
               <a href="shop.html">Shop</a>
-              <ul class="submenu">
-                <li><a href="pennor.html">Pennor</a></li>
+              <button
+                class="submenu-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="submenu-shop"
+                aria-label="Visa undermeny för Shop"
+              >
+                ▾
+              </button>
+              <ul class="submenu" id="submenu-shop" aria-labelledby="shop-link">
+                <li class="is-active"><a href="pennor.html">Pennor</a></li>
                 <li><a href="forvaring.html">Förvaring</a></li>
                 <li><a href="papper.html">Papper</a></li>
               </ul>
@@ -41,48 +79,237 @@
         </nav>
       </div>
     </header>
-    <h1>Pennor för kontor – kulspetspennor, markers & whiteboardpennor</h1>
-    <footer>
-      <div class="wrapper">
-        <div class="footer">
-          <div class="footer-col">
-            <h4>Proffs & Papper</h4>
+    <main class="l-wrapper" id="content">
+      <h1>Pennor för kontor – kulspetspennor, markers & whiteboardpennor</h1>
+    </main>
+    <footer class="site-footer">
+      <div class="l-wrapper">
+        <div class="site-footer__grid">
+          <section
+            class="site-footer__block"
+            data-area="company"
+            aria-label="Företag"
+          >
+            <div>
+              <a href="./" class="brand brand--footer brand__logo">
+                <img
+                  src="images/logo.svg"
+                  alt="Proffs och Pappers logotyp"
+                  width="75"
+                  height="75"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="brand__logo-text">Proffs och Papper</span>
+              </a>
+            </div>
+            <span class="brand__logo-sub">
+              <span class="tagline tagline--sm"
+                >Kontorsmaterial för proffs</span
+              >
+              <span class="tagline tagline--md"
+                >Kontorsmaterial för proffs och vardagshjältar</span
+              >
+              <span class="tagline tagline--lg"
+                >Kontorsmaterial för proffs och glada vardagshjältar</span
+              >
+            </span>
+            <address class="site-footer__org" aria-label="Företagsuppgifter">
+              <dl class="meta-list">
+                <dt>Företag</dt>
+                <dd>Proffs och Papper AB</dd>
+
+                <dt>Org. nr.</dt>
+                <dd><data value="5561234567">556123-4567</data></dd>
+              </dl>
+            </address>
+          </section>
+          <section
+            class="site-footer__block"
+            data-area="trust"
+            aria-labelledby="footer-trust-heading"
+          >
+            <h2 id="footer-trust-heading">Trygg och säker handel</h2>
+            <dl class="trust-list">
+              <dt>
+                <span class="trust-icon" aria-hidden="true">🔒</span>
+                <span class="trust-text">Säker betalning</span>
+              </dt>
+              <dd class="sr-only">Betalning sker via säkra betaltjänster.</dd>
+              <dt>
+                <span class="trust-icon" aria-hidden="true">🇸🇪</span>
+                <span class="trust-text">Svenskt företag</span>
+              </dt>
+              <dd class="sr-only">Registrerat och verksamt i Sverige.</dd>
+              <dt>
+                <span class="trust-icon" aria-hidden="true">📦</span>
+                <span class="trust-text">Snabba leveranser</span>
+              </dt>
+              <dd class="sr-only">Snabb och pålitlig leverans.</dd>
+              <dt>
+                <span class="trust-icon" aria-hidden="true">↩️</span>
+                <span class="trust-text">14 dagars öppet köp</span>
+              </dt>
+              <dd class="sr-only">Öppet köp enligt villkor.</dd>
+            </dl>
+          </section>
+          <nav
+            class="site-footer__block"
+            data-area="policies"
+            aria-labelledby="footer-policies-heading"
+          >
+            <h2 id="footer-policies-heading">Villkor & policyer</h2>
+            <ul>
+              <li>
+                <a href="placeholder.html">Köpvillkor</a>
+              </li>
+              <li>
+                <a href="placeholder.html">Retur- och leveransinfo</a>
+              </li>
+              <li>
+                <a href="placeholder.html">Tillgänglighetsredogörelse</a>
+              </li>
+              <li>
+                <a href="placeholder.html">Integritetspolicy</a>
+              </li>
+              <li>
+                <a href="placeholder.html">Cookiehantering</a>
+              </li>
+              <li>
+                <a href="placeholder.html">Användarvillkor</a>
+              </li>
+              <li>
+                <a href="placeholder.html">Säker betalning</a>
+              </li>
+            </ul>
+          </nav>
+          <nav
+            class="site-footer__block"
+            data-area="payments"
+            aria-labelledby="footer-payments-heading"
+          >
+            <h2 id="footer-payments-heading">Betala med</h2>
+            <ul class="payment-icons">
+              <li>
+                <a href="#" class="payment-link" aria-label="Betala med Swish">
+                  <img
+                    src="images/payments/swish-icon.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#" class="payment-link" aria-label="Betala med PayPal">
+                  <img
+                    src="images/payments/swish-icon.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#" class="payment-link" aria-label="Betala med Visa">
+                  <img
+                    src="images/payments/swish-icon.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="payment-link"
+                  aria-label="Betala med MasterCard"
+                >
+                  <img
+                    src="images/payments/swish-icon.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="payment-link"
+                  aria-label="Betala med American Express"
+                >
+                  <img
+                    src="images/payments/swish-icon.svg"
+                    alt=""
+                    width="24"
+                    height="24"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <section
+            class="site-footer__block"
+            data-area="contact"
+            aria-labelledby="footer-contact-heading"
+          >
+            <h2 id="footer-contact-heading">Kontakt</h2>
+            <p class="fun-line">
+              Kontakta oss – vi svarar snabbare än du hinner säga “Hälsingland”.
+            </p>
+            <address class="site-footer__address">
+              <dl class="meta-list">
+                <dt>Telefon</dt>
+                <dd><a href="tel:+466501234567">0650-123 45 67</a></dd>
+
+                <dt>E-post</dt>
+                <dd>
+                  <a href="mailto:hej@proffsochpapper.se"
+                    >hej@proffsochpapper.se</a
+                  >
+                </dd>
+
+                <dt>Adress</dt>
+                <dd>Solskensgatan 7, 824 55 Hudiksvall</dd>
+              </dl>
+            </address>
+          </section>
+          <section
+            class="site-footer__block"
+            data-area="hours"
+            aria-labelledby="footer-hours-heading"
+          >
+            <h2 id="footer-hours-heading">Öppettider kundservice</h2>
+            <dl class="meta-list">
+              <dt>Mån–fre</dt>
+              <dd>08.00–17.00</dd>
+
+              <dt>Lunch</dt>
+              <dd>12.00–13.00</dd>
+            </dl>
             <p class="fun-line">
               Vi håller ställningarna på kontoret – vare sig ni är tre personer,
               trehundra, eller känns som tre tusen när kaffet är slut.
             </p>
-          </div>
-          <div class="footer-col">
-            <h4>Kontakt</h4>
-            <p class="fun-line">
-              Kontakta oss – vi svarar snabbare än du hinner säga “Hälsingland”
-            </p>
-            <ul>
-              <li>Telefon: 08-123 45 67</li>
-              <li>
-                E-post:
-                <a href="mailto:hej@proffsochpapper.se"
-                  >hej@proffsochpapper.se</a
-                >
-              </li>
-              <li>Adress: Solskensgatan 7, 824 55 Hudiksvall</li>
-            </ul>
-            <p class="fun-line">Här, inne hos oss, skiner alltid solen.</p>
-          </div>
-          <div class="footer-col">
-            <h4>Öppettider kundservice</h4>
-            <ul>
-              <li>Mån–fre: 08.00–17.00</li>
-              <li>Lunchstängt: 12.00–13.00</li>
-              <p class="fun-line">
-                Vi arbetar bäst när vi är mätta – det är vetenskapligt bevisat
-                av oss själva.
-              </p>
-            </ul>
-          </div>
+          </section>
         </div>
-        <div class="footer-bottom">
-          © 2025 Proffs & Papper AB. Alla rättigheter förbehålls.
+        <div class="site-footer__bottom">
+          <small>
+            © 2025 Proffs och Papper AB. Alla rättigheter förbehålls.</small
+          >
+          <a class="skip-scrolling" href="#top">Till toppen</a>
         </div>
       </div>
     </footer>

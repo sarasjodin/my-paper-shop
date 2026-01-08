@@ -17,6 +17,43 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ---
 
+## [1.0.0] – 2026-01-08
+
+### Added
+
+- Implementerat tillgänglig mobilmeny och `submenu` med stöd för både klick och tangentbordsnavigering
+
+- Implementerat fungerande `submenu` för desktop (`hover` och `:focus-within`)
+
+- Lagt till “Hoppa till innehåll”-länk samt “Till toppen”-länk för förbättrad tangentbordsnavigering
+
+- Infört tydliga fokusmarkeringar och mobilvänliga klickytor för hamburgermeny och footer-ikoner
+
+### Changed
+
+- Omstrukturerat CSS till en tydlig hierarki: design tokens → base → a11y/utilities → layout → components → media queries
+
+- Standardiserat layouten så att `.l-wrapper` är gemensam “single source of truth” för horisontell `padding` och `max-width` mellan `header`, `main` och `footer`
+
+- Förbättrat navigationens semantik och beteende genom användning av `aria-expanded` och `aria-controls`
+
+- Förbättrat footer-layout (`payments` och `trust`-information) för bättre användbarhet på mobil och desktop
+
+### Fixed
+
+Säkerställt att interaktiva element uppfyller rekommenderade minimimått för pekskärmar
+
+---
+
+## [0.0.2] – 2025-12-16
+
+- Skapat css-foldrar för `base`, `layout`, `styles` samt `components`/`pages`/`sections` som jag kommer använda för den statiska siten och sedan slå ihop dessa till uppgift 4.2.
+- Uppdaterad favicons för 16x16, 32x32, 180x180, 192x192
+- Ändrat <html lang="sv">
+- Rensat bort SEO meta eftersom det är meningen att SEO plugin ska installeras för uppgift 4.2
+
+---
+
 ## [0.0.1] – 2025-11-25
 
 ### Added
