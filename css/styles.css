@@ -837,6 +837,27 @@ body.page-section.nav-open {
    6. MEDIA QUERIES / RESPONSIVE OVERRIDES
    ========================================================= */
 
+/* ====== Navigation / Submenu mobile tweaks ====== */
+@media (max-width: 859px) {
+  .submenu-toggle::before {
+    content: '▾';
+    display: inline-block;
+    line-height: 1;
+    transform: translateY(-1px);
+  }
+
+  .submenu-toggle[aria-expanded='true']::before {
+    transform: rotate(180deg);
+  }
+
+  /* Slår av alla varianter av a::after på mobil */
+  .has-submenu > a::after,
+  .has-submenu.is-active > a::after,
+  .has-submenu:focus-within > a::after {
+    content: none !important;
+  }
+}
+
 /* ====== Base ====== */
 
 @media (min-width: 600px) {
@@ -1053,6 +1074,23 @@ body.page-section.nav-open {
   .has-submenu:focus-within > .submenu {
     display: block;
   }
+
+  .submenu-toggle {
+    display: none;
+  }
+
+  .has-submenu > a::after {
+    content: '▾';
+    display: inline-block;
+    margin-left: 0.35rem;
+    font-size: 0.85em;
+    transform: translateY(-1px);
+  }
+
+  .has-submenu:hover > a::after,
+  .has-submenu:focus-within > a::after {
+    transform: rotate(180deg);
+  }
 }
 
 @media (max-width: 1400px) {
@@ -1119,7 +1157,7 @@ body.page-section.nav-open {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(44px, max-content));
     gap: clamp(0.5rem, 1.5vw, 1rem);
-    justify-content: center;
+    justify-content: flex-start;
     justify-items: center;
   }
 

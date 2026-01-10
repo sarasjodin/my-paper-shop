@@ -17,6 +17,14 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ---
 
+## [1.0.1] – 2026-01-10
+
+### Added
+
+- Lagt till tydlig undermeny-indikator (pil) i huvudnavigeringen som automatiskt visas för menyval med underliggande sidor, anpassad för både mobil och desktop.
+
+---
+
 ## [1.0.0] – 2026-01-08
 
 ### Added
