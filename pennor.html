@@ -16,17 +16,22 @@
     <a class="skip-link" href="#content">Hoppa till innehåll</a>
     <header class="site-header">
       <div class="l-wrapper site-header__wrapper">
-        <a href="./" class="brand brand--header brand__logo">
+        <a
+          href="./"
+          class="brand brand--header brand__logo"
+          aria-label="Proffs och Papper – Kontorsmaterial för proffs och glada vardagshjältar"
+        >
           <img
             src="images/logo.svg"
-            alt="Proffs och Papper – Kontorsmaterial för proffs och vardagshjältar"
+            alt=""
             width="100"
             height="100"
+            aria-hidden="true"
           />
-          <span class="brand__logo-text-wrap">
+          <span class="brand__logo-text-wrap" aria-hidden="true">
             <span class="brand__logo-text">Proffs och Papper</span>
 
-            <span class="brand__logo-sub">
+            <span class="brand__logo-sub" aria-hidden="true">
               <span class="tagline tagline--sm"
                 >Kontorsmaterial för proffs</span
               >
@@ -57,7 +62,7 @@
             <li><a href="./">Start</a></li>
             <li><a href="nyheter.html">Nyheter</a></li>
             <li class="has-submenu is-active">
-              <a href="shop.html">Shop</a>
+              <a href="shop.html" id="shop-link">Shop</a>
               <button
                 class="submenu-toggle"
                 type="button"
@@ -67,7 +72,7 @@
               >
                 <span class="sr-only">Öppna undermeny</span>
               </button>
-              <ul class="submenu" id="submenu-shop" aria-labelledby="shop-link">
+              <ul class="submenu" id="submenu-shop">
                 <li class="is-active"><a href="pennor.html">Pennor</a></li>
                 <li><a href="forvaring.html">Förvaring</a></li>
                 <li><a href="papper.html">Papper</a></li>
@@ -79,8 +84,134 @@
         </nav>
       </div>
     </header>
-    <main class="l-wrapper" id="content">
-      <h1>Pennor för kontor – kulspetspennor, markers & whiteboardpennor</h1>
+    <main id="content" class="shop-page category-page">
+      <!-- HERO / INTRO -->
+      <section class="hero hero--category hero--forvaring">
+        <div class="l-wrapper hero__inner hero__inner--with-aside">
+          <div class="hero__text">
+            <nav class="breadcrumbs" aria-label="Brödsmulor">
+              <a href="shop.html">Shop</a> / <span>Pennor</span>
+            </nav>
+
+            <p class="hero__eyebrow">Kategori</p>
+            <h1>
+              Pennor för kontor – kulspetspennor, markers & whiteboardpennor
+            </h1>
+            <p class="ingress hero__lead">
+              Kulspets, markers och whiteboard – utvalda favoriter för
+              arbetsdagen.
+            </p>
+
+            <div class="hero__actions">
+              <a href="#products" class="btn btn-primary">Visa produkter</a>
+              <a href="nyheter.html" class="btn btn-secondary">Tips & guider</a>
+            </div>
+          </div>
+
+          <aside class="hero__aside hero__aside--category">
+            <img
+              src="images/hero-pennor.png"
+              alt=""
+              decoding="async"
+              fetchpriority="high"
+              aria-hidden="true"
+            />
+
+            <p class="hero__meta">
+              <strong>Proffstips:</strong> Använd färgkodade pennor för olika
+              uppgifter – det gör anteckningar och markeringar tydligare.
+            </p>
+          </aside>
+        </div>
+      </section>
+      <!-- FILTER-/CHIP-RAD -->
+      <section
+        class="shop-section category-filters"
+        aria-label="Filtrera produkter"
+      >
+        <div class="l-wrapper">
+          <div class="filter-bar">
+            <span class="filter-label">Filtrera:</span>
+            <ul class="filter-list">
+              <li>
+                <button type="button" class="filter-chip is-active">
+                  Alla
+                </button>
+              </li>
+              <li><button type="button" class="filter-chip">Pärmar</button></li>
+              <li><button type="button" class="filter-chip">Lådor</button></li>
+              <li>
+                <button type="button" class="filter-chip">
+                  Tidsskriftsamlare
+                </button>
+              </li>
+              <li>
+                <button type="button" class="filter-chip">Tillbehör</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- GRID MED KORT: PRODUKTER -->
+      <section class="shop-section category-products" aria-label="Pennor">
+        <div class="l-wrapper">
+          <header class="section-header">
+            <h2>Pennor</h2>
+            <p>
+              Skriv med flyt och precision – från kulspetspennor och gelpennor
+              till markers och whiteboardpennor som håller hela arbetsdagen.
+            </p>
+          </header>
+
+          <div class="products-grid">
+            <article class="product-card">
+              <img
+                src="images/07-kulspetspenna.png"
+                alt=""
+                class="product-image"
+                loading="lazy"
+                decoding="async"
+                aria-hidden="true"
+              />
+              <h3>Kulspetspenna 0.7</h3>
+              <p class="product-meta">Svart • Mjuk skrivkänsla</p>
+              <p class="product-price">19 kr</p>
+              <a href="#" class="btn btn-ghost">Läs mer</a>
+            </article>
+
+            <article class="product-card">
+              <img
+                src="images/markerpenna.png"
+                alt=""
+                class="product-image"
+                loading="lazy"
+                decoding="async"
+                aria-hidden="true"
+              />
+              <h3>Marker “Highlight”</h3>
+              <p class="product-meta">Sned spets • För rubriker & markering</p>
+              <p class="product-price">25 kr</p>
+              <a href="#" class="btn btn-ghost">Läs mer</a>
+            </article>
+
+            <article class="product-card">
+              <img
+                src="images/whiteboard-regnbagsfarger.png"
+                alt=""
+                class="product-image"
+                loading="lazy"
+                decoding="async"
+                aria-hidden="true"
+              />
+              <h3>Whiteboard-set 4-pack med hållare i plexiglas</h3>
+              <p class="product-meta">Röd • Orange • Gul • Grön • Blå • Lila</p>
+              <p class="product-price">259 kr</p>
+              <a href="#" class="btn btn-ghost">Läs mer</a>
+            </article>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="site-footer">
       <div class="l-wrapper">
@@ -88,7 +219,7 @@
           <section
             class="site-footer__block"
             data-area="company"
-            aria-label="Företag"
+            aria-label="Proffs och Papper"
           >
             <div>
               <a href="./" class="brand brand--footer brand__logo">
@@ -99,11 +230,14 @@
                   height="75"
                   loading="lazy"
                   decoding="async"
+                  aria-hidden="true"
                 />
-                <span class="brand__logo-text">Proffs och Papper</span>
+                <span class="brand__logo-text" aria-hidden="true"
+                  >Proffs och Papper</span
+                >
               </a>
             </div>
-            <span class="brand__logo-sub">
+            <span class="brand__logo-sub" aria-hidden="true">
               <span class="tagline tagline--sm"
                 >Kontorsmaterial för proffs</span
               >
@@ -307,7 +441,17 @@
         </div>
         <div class="site-footer__bottom">
           <small>
-            © 2025 Proffs och Papper AB. Alla rättigheter förbehålls.</small
+            © 2025 Proffs och Papper är ett fiktivt varumärke. Webbplatsen är
+            skapad av
+            <a
+              href="https://github.com/sarasjodin"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Sara Sjödin Scolari</a
+            ><br />
+            som ett projekt för universitetsprogrammet Webbutveckling, 120 hp,
+            vid Mittuniversitetet.<br />Samtliga foton på webbplatsen är
+            AI-genererade.</small
           >
           <a class="skip-scrolling" href="#top">Till toppen</a>
         </div>

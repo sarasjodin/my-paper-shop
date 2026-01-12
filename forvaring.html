@@ -16,17 +16,22 @@
     <a class="skip-link" href="#content">Hoppa till innehåll</a>
     <header class="site-header">
       <div class="l-wrapper site-header__wrapper">
-        <a href="./" class="brand brand--header brand__logo">
+        <a
+          href="./"
+          class="brand brand--header brand__logo"
+          aria-label="Proffs och Papper – Kontorsmaterial för proffs och glada vardagshjältar"
+        >
           <img
             src="images/logo.svg"
-            alt="Proffs och Papper – Kontorsmaterial för proffs och vardagshjältar"
+            alt=""
             width="100"
             height="100"
+            aria-hidden="true"
           />
-          <span class="brand__logo-text-wrap">
+          <span class="brand__logo-text-wrap" aria-hidden="true">
             <span class="brand__logo-text">Proffs och Papper</span>
 
-            <span class="brand__logo-sub">
+            <span class="brand__logo-sub" aria-hidden="true">
               <span class="tagline tagline--sm"
                 >Kontorsmaterial för proffs</span
               >
@@ -57,7 +62,7 @@
             <li><a href="./">Start</a></li>
             <li><a href="nyheter.html">Nyheter</a></li>
             <li class="has-submenu is-active">
-              <a href="shop.html">Shop</a>
+              <a href="shop.html" id="shop-link">Shop</a>
               <button
                 class="submenu-toggle"
                 type="button"
@@ -67,7 +72,7 @@
               >
                 <span class="sr-only">Öppna undermeny</span>
               </button>
-              <ul class="submenu" id="submenu-shop" aria-labelledby="shop-link">
+              <ul class="submenu" id="submenu-shop">
                 <li><a href="pennor.html">Pennor</a></li>
                 <li class="is-active">
                   <a href="forvaring.html">Förvaring</a>
@@ -81,8 +86,127 @@
         </nav>
       </div>
     </header>
-    <main class="l-wrapper" id="content">
-      <h1>Förvaring för kontoret – pärmar, arkiv och skrivbordstillbehör</h1>
+    <main id="content" class="shop-page category-page">
+      <!-- HERO / INTRO -->
+      <section class="hero hero--category hero--forvaring">
+        <div class="l-wrapper hero__inner hero__inner--with-aside">
+          <div class="hero__text">
+            <nav class="breadcrumbs" aria-label="Brödsmulor">
+              <a href="shop.html">Shop</a>
+              <span>/</span>
+              <span aria-current="page">Förvaring</span>
+            </nav>
+
+            <p class="hero__eyebrow">Kategori</p>
+            <h1>Förvaring för kontoret</h1>
+
+            <p class="ingress hero__lead">
+              Ordning och reda börjar med smart förvaring. Här hittar du pärmar,
+              lådor och skrivbordstillbehör som ger bättre överblick.
+            </p>
+
+            <div class="hero__actions">
+              <a href="#products" class="btn btn-primary">Visa produkter</a>
+              <a href="nyheter.html" class="btn btn-secondary">Tips & guider</a>
+            </div>
+          </div>
+
+          <aside class="hero__aside hero__aside--category">
+            <img
+              src="images/hero-forvaring-bla.png"
+              alt=""
+              decoding="async"
+              fetchpriority="high"
+              aria-hidden="true"
+            />
+
+            <p class="hero__meta">
+              <strong>Proffstips:</strong> Börja med en färg per avdelning för
+              tydligare arkivering.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- FILTER-/CHIP-RAD -->
+      <section
+        class="shop-section category-filters"
+        aria-label="Filtrera produkter"
+      >
+        <div class="l-wrapper">
+          <div class="filter-bar">
+            <span class="filter-label">Filtrera:</span>
+            <ul class="filter-list">
+              <li>
+                <button type="button" class="filter-chip is-active">
+                  Alla
+                </button>
+              </li>
+              <li><button type="button" class="filter-chip">Pärmar</button></li>
+              <li><button type="button" class="filter-chip">Lådor</button></li>
+              <li>
+                <button type="button" class="filter-chip">
+                  Tidsskriftsamlare
+                </button>
+              </li>
+              <li>
+                <button type="button" class="filter-chip">Tillbehör</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- GRID MED KORT: PRODUKTER -->
+      <section class="shop-section category-products" aria-label="Förvaring">
+        <div class="l-wrapper">
+          <header class="section-header">
+            <h2>Förvaring</h2>
+            <p>
+              Skapa struktur i hyllan, på skrivbordet och i arkivet med
+              förvaring som tål att användas varje dag.
+            </p>
+          </header>
+
+          <div class="products-grid">
+            <article class="product-card">
+              <img
+                src="images/vit-forvaringslada-a4.png"
+                alt="Vit förvaringslåda A4"
+                class="product-image"
+              />
+              <h3>Förvaringslåda A4</h3>
+              <p class="product-meta">Staplingsbar • Med etikettfönster</p>
+              <p class="product-price">79 kr</p>
+              <a href="#" class="btn btn-ghost">Läs mer</a>
+            </article>
+
+            <article class="product-card">
+              <img
+                src="images/kontorsparm-80mm-bla.png"
+                alt="Blå kontorspärm"
+                class="product-image"
+              />
+              <h3>Kontorspärm A4</h3>
+              <p class="product-meta">80 mm • Ryggetikett • Blå</p>
+              <p class="product-price">39 kr</p>
+              <a href="#" class="btn btn-ghost">Läs mer</a>
+            </article>
+
+            <article class="product-card">
+              <img
+                src="images/vit-tidsskriftssamlare-fokus.png"
+                alt="Vit tidsskriftsamlare"
+                class="product-image"
+              />
+              <h3>Tidsskriftsamlare “Fokus”</h3>
+              <p class="product-meta">Passar A4 • Vit</p>
+              <p class="product-price">59 kr</p>
+              <a href="#" class="btn btn-ghost">Läs mer</a>
+            </article>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="site-footer">
       <div class="l-wrapper">
@@ -90,7 +214,7 @@
           <section
             class="site-footer__block"
             data-area="company"
-            aria-label="Företag"
+            aria-label="Proffs och Papper"
           >
             <div>
               <a href="./" class="brand brand--footer brand__logo">
@@ -101,11 +225,14 @@
                   height="75"
                   loading="lazy"
                   decoding="async"
+                  aria-hidden="true"
                 />
-                <span class="brand__logo-text">Proffs och Papper</span>
+                <span class="brand__logo-text" aria-hidden="true"
+                  >Proffs och Papper</span
+                >
               </a>
             </div>
-            <span class="brand__logo-sub">
+            <span class="brand__logo-sub" aria-hidden="true">
               <span class="tagline tagline--sm"
                 >Kontorsmaterial för proffs</span
               >
@@ -309,7 +436,17 @@
         </div>
         <div class="site-footer__bottom">
           <small>
-            © 2025 Proffs och Papper AB. Alla rättigheter förbehålls.</small
+            © 2025 Proffs och Papper är ett fiktivt varumärke. Webbplatsen är
+            skapad av
+            <a
+              href="https://github.com/sarasjodin"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Sara Sjödin Scolari</a
+            ><br />
+            som ett projekt för universitetsprogrammet Webbutveckling, 120 hp,
+            vid Mittuniversitetet.<br />Samtliga foton på webbplatsen är
+            AI-genererade.</small
           >
           <a class="skip-scrolling" href="#top">Till toppen</a>
         </div>

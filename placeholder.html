@@ -16,17 +16,22 @@
     <a class="skip-link" href="#content">Hoppa till innehåll</a>
     <header class="site-header">
       <div class="l-wrapper site-header__wrapper">
-        <a href="./" class="brand brand--header brand__logo">
+        <a
+          href="./"
+          class="brand brand--header brand__logo"
+          aria-label="Proffs och Papper – Kontorsmaterial för proffs och glada vardagshjältar"
+        >
           <img
             src="images/logo.svg"
-            alt="Proffs och Papper – Kontorsmaterial för proffs och vardagshjältar"
+            alt=""
             width="100"
             height="100"
+            aria-hidden="true"
           />
-          <span class="brand__logo-text-wrap">
+          <span class="brand__logo-text-wrap" aria-hidden="true">
             <span class="brand__logo-text">Proffs och Papper</span>
 
-            <span class="brand__logo-sub">
+            <span class="brand__logo-sub" aria-hidden="true">
               <span class="tagline tagline--sm"
                 >Kontorsmaterial för proffs</span
               >
@@ -56,8 +61,8 @@
           <ul>
             <li><a href="./">Start</a></li>
             <li><a href="nyheter.html">Nyheter</a></li>
-            <li class="has-submenu is-active">
-              <a href="shop.html">Shop</a>
+            <li class="has-submenu">
+              <a href="shop.html" id="shop-link">Shop</a>
               <button
                 class="submenu-toggle"
                 type="button"
@@ -67,10 +72,10 @@
               >
                 <span class="sr-only">Öppna undermeny</span>
               </button>
-              <ul class="submenu" id="submenu-shop" aria-labelledby="shop-link">
+              <ul class="submenu" id="submenu-shop">
                 <li><a href="pennor.html">Pennor</a></li>
                 <li><a href="forvaring.html">Förvaring</a></li>
-                <li class="is-active"><a href="papper.html">Papper</a></li>
+                <li><a href="papper.html">Papper</a></li>
               </ul>
             </li>
             <li><a href="om-oss.html">Om oss</a></li>
@@ -79,18 +84,39 @@
         </nav>
       </div>
     </header>
-    <main class="l-wrapper" id="content">
-      <h1>Denna sida är en exempelsida</h1>
-      <h2>Tänkt att användas till:</h2>
-      <ul>
-        <li>Köpvillkor</li>
-        <li>Retur- och leveransinfo</li>
-        <li>Tillgänglighetsredogörelse</li>
-        <li>Integritetspolicy</li>
-        <li>Cookiehantering</li>
-        <li>Användarvillkor</li>
-        <li>Säker betalning</li>
-      </ul>
+    <main id="content">
+      <section class="placeholder-hero">
+        <div class="l-wrapper placeholder-hero-inner">
+          <h1>Denna sida är en exempelsida</h1>
+          <h2>Tänkt att användas till:</h2>
+          <ul>
+            <li>Köpvillkor</li>
+            <li>Retur- och leveransinfo</li>
+            <li>Tillgänglighetsredogörelse</li>
+            <li>Integritetspolicy</li>
+            <li>Cookiehantering</li>
+            <li>Användarvillkor</li>
+            <li>Säker betalning</li>
+          </ul>
+        </div>
+      </section>
+      <section class="placeholder-content">
+        <div class="l-wrapper placeholder-content-inner">
+          <h2>Lorem ipsum header</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            fringilla, nunc et pellentesque egestas, lacus ante convallis
+            tellus, vitae iaculis lacus elit id tortor. Vivamus facilisis
+            ultricies volutpat. Curabitur ut massa nec sapien auctor gravida in
+            in tellus. Nulla facilisi. Donec ut felis euismod, tincidunt nunc
+            at, ullamcorper enim. Quisque euismod, urna eu tincidunt
+            consectetur, nisi nisl lacinia mi, a pulvinar odio dolor non urna.
+            Sed at fringilla risus. Nullam euismod, nisi vel consectetur
+            interdum, nisl nisi consectetur nisi, euismod aliquam nisl nisi
+            euismod nisi.
+          </p>
+        </div>
+      </section>
     </main>
     <footer class="site-footer">
       <div class="l-wrapper">
@@ -98,7 +124,7 @@
           <section
             class="site-footer__block"
             data-area="company"
-            aria-label="Företag"
+            aria-label="Proffs och Papper"
           >
             <div>
               <a href="./" class="brand brand--footer brand__logo">
@@ -109,11 +135,14 @@
                   height="75"
                   loading="lazy"
                   decoding="async"
+                  aria-hidden="true"
                 />
-                <span class="brand__logo-text">Proffs och Papper</span>
+                <span class="brand__logo-text" aria-hidden="true"
+                  >Proffs och Papper</span
+                >
               </a>
             </div>
-            <span class="brand__logo-sub">
+            <span class="brand__logo-sub" aria-hidden="true">
               <span class="tagline tagline--sm"
                 >Kontorsmaterial för proffs</span
               >
@@ -317,7 +346,17 @@
         </div>
         <div class="site-footer__bottom">
           <small>
-            © 2025 Proffs och Papper AB. Alla rättigheter förbehålls.</small
+            © 2025 Proffs och Papper är ett fiktivt varumärke. Webbplatsen är
+            skapad av
+            <a
+              href="https://github.com/sarasjodin"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Sara Sjödin Scolari</a
+            ><br />
+            som ett projekt för universitetsprogrammet Webbutveckling, 120 hp,
+            vid Mittuniversitetet.<br />Samtliga foton på webbplatsen är
+            AI-genererade.</small
           >
           <a class="skip-scrolling" href="#top">Till toppen</a>
         </div>

@@ -16,17 +16,22 @@
     <a class="skip-link" href="#content">Hoppa till innehåll</a>
     <header class="site-header">
       <div class="l-wrapper site-header__wrapper">
-        <a href="./" class="brand brand--header brand__logo">
+        <a
+          href="./"
+          class="brand brand--header brand__logo"
+          aria-label="Proffs och Papper – Kontorsmaterial för proffs och glada vardagshjältar"
+        >
           <img
             src="images/logo.svg"
-            alt="Proffs och Papper – Kontorsmaterial för proffs och vardagshjältar"
+            alt=""
             width="100"
             height="100"
+            aria-hidden="true"
           />
-          <span class="brand__logo-text-wrap">
+          <span class="brand__logo-text-wrap" aria-hidden="true">
             <span class="brand__logo-text">Proffs och Papper</span>
 
-            <span class="brand__logo-sub">
+            <span class="brand__logo-sub" aria-hidden="true">
               <span class="tagline tagline--sm"
                 >Kontorsmaterial för proffs</span
               >
@@ -57,7 +62,7 @@
             <li><a href="./">Start</a></li>
             <li><a href="nyheter.html">Nyheter</a></li>
             <li class="has-submenu">
-              <a href="shop.html">Shop</a>
+              <a href="shop.html" id="shop-link">Shop</a>
               <button
                 class="submenu-toggle"
                 type="button"
@@ -67,7 +72,7 @@
               >
                 <span class="sr-only">Öppna undermeny</span>
               </button>
-              <ul class="submenu" id="submenu-shop" aria-labelledby="shop-link">
+              <ul class="submenu" id="submenu-shop">
                 <li><a href="pennor.html">Pennor</a></li>
                 <li><a href="forvaring.html">Förvaring</a></li>
                 <li><a href="papper.html">Papper</a></li>
@@ -79,8 +84,160 @@
         </nav>
       </div>
     </header>
-    <main class="l-wrapper" id="content">
-      <h1>Kontakta Proffs & Papper</h1>
+    <main id="content">
+      <!-- INTRO -->
+      <section class="hero hero--page hero--contact">
+        <div class="l-wrapper hero__inner hero__inner--with-aside">
+          <div class="hero__text">
+            <p class="hero__eyebrow">Kontakt</p>
+            <h1>Kontakta Proffs & Papper</h1>
+            <p class="ingress hero__lead">
+              Hör av dig om du vill beställa, få offert eller bara bolla idéer
+              kring kontorsmaterial. Vi svarar oftast samma arbetsdag.
+            </p>
+          </div>
+
+          <aside class="hero__aside hero__aside--contact">
+            <figure class="hero-media">
+              <img
+                src="images/hero-kontakta-oss.png"
+                alt=""
+                decoding="async"
+                fetchpriority="high"
+              />
+            </figure>
+          </aside>
+        </div>
+      </section>
+
+      <!-- GRID MED KORT: FORM + INFO -->
+      <section>
+        <div class="l-wrapper">
+          <h2>Hör av dig</h2>
+          <div class="contact-grid">
+            <section
+              class="contact-card contact-form-card"
+              aria-label="Kontaktformulär"
+            >
+              <h3>Skriv till oss</h3>
+              <form action="#" method="post" class="contact-form">
+                <div class="form-row">
+                  <label for="name">Namn</label>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    required
+                    placeholder="Ditt namn"
+                  />
+                </div>
+
+                <div class="form-row">
+                  <label for="company">Företag (valfritt)</label>
+                  <input
+                    id="company"
+                    name="company"
+                    type="text"
+                    placeholder="Företag eller organisation"
+                  />
+                </div>
+
+                <div class="form-row">
+                  <label for="email">E-post</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    placeholder="namn@foretag.se"
+                  />
+                </div>
+
+                <div class="form-row">
+                  <label for="topic">Ärende</label>
+                  <select id="topic" name="topic">
+                    <option>Allmän fråga</option>
+                    <option>Order och leverans</option>
+                    <option>Företagsavtal</option>
+                    <option>Faktura och betalning</option>
+                  </select>
+                </div>
+
+                <div class="form-row">
+                  <label for="message">Meddelande</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    required
+                    placeholder="Berätta kort vad du behöver hjälp med"
+                  ></textarea>
+                  <small
+                    >Vi återkommer så snart vi kan – vanligtvis inom en
+                    arbetsdag.</small
+                  >
+                </div>
+
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary">
+                    Skicka meddelande
+                  </button>
+                </div>
+              </form>
+            </section>
+
+            <section
+              class="contact-card contact-info-card"
+              aria-label="Kontaktuppgifter"
+            >
+              <h3>Besök oss – vår adress och öppettider</h3>
+
+              <div class="embed video-embed">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!4v1764091091679!6m8!1m7!1sN2k6PuovbOpph3cMaNFI7Q!2m2!1d61.72998907493777!2d17.10326207829247!3f302.0131979004584!4f0!5f0.7820865974627469"
+                  title="Karta till Proffs och Papper, Solskensgatan 7, Hudiksvall"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  allowfullscreen
+                ></iframe>
+              </div>
+
+              <div class="contact-block">
+                <h4>Adress</h4>
+                <p>
+                  Proffs och Papper i Glada Hudik<br />
+                  Solskensgatan 7<br />
+                  824 55 Hudiksvall
+                </p>
+              </div>
+
+              <div class="contact-block">
+                <h4>Öppettider kundservice</h4>
+                <dl class="opening-hours">
+                  <div>
+                    <dt>Måndag–fredag</dt>
+                    <dd>08.00–17.00 (lunch 12.00–13.00)</dd>
+                  </div>
+                  <div>
+                    <dt>Lördag–söndag</dt>
+                    <dd>Stängt</dd>
+                  </div>
+                </dl>
+              </div>
+
+              <div class="contact-block">
+                <h4>Kontaktuppgifter</h4>
+                <p>
+                  Telefon: <a href="tel:+4665012345">0650-12 345</a><br />
+                  E-post:
+                  <a href="mailto:hej@proffsochpapper.se"
+                    >hej@proffsochpapper.se</a
+                  >
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="site-footer">
       <div class="l-wrapper">
@@ -88,7 +245,7 @@
           <section
             class="site-footer__block"
             data-area="company"
-            aria-label="Företag"
+            aria-label="Proffs och Papper"
           >
             <div>
               <a href="./" class="brand brand--footer brand__logo">
@@ -99,11 +256,14 @@
                   height="75"
                   loading="lazy"
                   decoding="async"
+                  aria-hidden="true"
                 />
-                <span class="brand__logo-text">Proffs och Papper</span>
+                <span class="brand__logo-text" aria-hidden="true"
+                  >Proffs och Papper</span
+                >
               </a>
             </div>
-            <span class="brand__logo-sub">
+            <span class="brand__logo-sub" aria-hidden="true">
               <span class="tagline tagline--sm"
                 >Kontorsmaterial för proffs</span
               >
@@ -307,7 +467,17 @@
         </div>
         <div class="site-footer__bottom">
           <small>
-            © 2025 Proffs och Papper AB. Alla rättigheter förbehålls.</small
+            © 2025 Proffs och Papper är ett fiktivt varumärke. Webbplatsen är
+            skapad av
+            <a
+              href="https://github.com/sarasjodin"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Sara Sjödin Scolari</a
+            ><br />
+            som ett projekt för universitetsprogrammet Webbutveckling, 120 hp,
+            vid Mittuniversitetet.<br />Samtliga foton på webbplatsen är
+            AI-genererade.</small
           >
           <a class="skip-scrolling" href="#top">Till toppen</a>
         </div>

@@ -10,10 +10,23 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 - Placeholder for upcoming changes and planned features
 
-[Planned]
+## Planned
 
-- Färdigställa alla sidor: `startsida`, `nyheter/blogg`, `shop`, `produktsidor`, `om oss` och `kontakt`
-- Lägga in riktigt innehåll (dummytexter och -bilder byts mot texter och bilder anpassade för Proffs & Papper)
+---
+
+## [2.0.0] – 2026-01-12
+
+### Added
+
+- Slutfört samtliga huvudsidor: `Start`, `Nyheter`, `Shop`,
+  produktsidor (`Pennor`, `Förvaring`, `Papper`), `Om oss` och `Kontakt`
+
+- Ersatt placeholder-innehåll med verkligt, varumärkesanpassat
+  innehåll (texter och bilder för Proffs & Papper). Alla bilder har AI-genererats.
+
+### Notes
+
+- All HTML-kod och CSS-kod har validerats med `https://validator.w3.org/` och `https://jigsaw.w3.org/css-validator/validator`
 
 ---
 

@@ -16,17 +16,22 @@
     <a class="skip-link" href="#content">Hoppa till innehåll</a>
     <header class="site-header">
       <div class="l-wrapper site-header__wrapper">
-        <a href="./" class="brand brand--header brand__logo">
+        <a
+          href="./"
+          class="brand brand--header brand__logo"
+          aria-label="Proffs och Papper – Kontorsmaterial för proffs och glada vardagshjältar"
+        >
           <img
             src="images/logo.svg"
-            alt="Proffs och Papper – Kontorsmaterial för proffs och vardagshjältar"
+            alt=""
             width="100"
             height="100"
+            aria-hidden="true"
           />
-          <span class="brand__logo-text-wrap">
+          <span class="brand__logo-text-wrap" aria-hidden="true">
             <span class="brand__logo-text">Proffs och Papper</span>
 
-            <span class="brand__logo-sub">
+            <span class="brand__logo-sub" aria-hidden="true">
               <span class="tagline tagline--sm"
                 >Kontorsmaterial för proffs</span
               >
@@ -57,7 +62,7 @@
             <li><a href="./">Start</a></li>
             <li><a href="nyheter.html">Nyheter</a></li>
             <li class="has-submenu is-active">
-              <a href="shop.html">Shop</a>
+              <a href="shop.html" id="shop-link">Shop</a>
               <button
                 class="submenu-toggle"
                 type="button"
@@ -67,7 +72,7 @@
               >
                 <span class="sr-only">Öppna undermeny</span>
               </button>
-              <ul class="submenu" id="submenu-shop" aria-labelledby="shop-link">
+              <ul class="submenu" id="submenu-shop">
                 <li><a href="pennor.html">Pennor</a></li>
                 <li><a href="forvaring.html">Förvaring</a></li>
                 <li><a href="papper.html">Papper</a></li>
@@ -79,8 +84,186 @@
         </nav>
       </div>
     </header>
-    <main class="l-wrapper" id="content">
-      <h1>Hela sortimentet av kontorsmaterial för kontor och företag</h1>
+    <main id="content" class="shop-page">
+      <!-- HERO / INTRO -->
+      <section class="hero hero--shop">
+        <div class="l-wrapper hero__inner">
+          <div class="hero__text">
+            <p class="hero__eyebrow">Shop</p>
+            <h1>Hela sortimentet av kontorsmaterial för kontor och företag</h1>
+            <p class="ingress hero__lead">
+              Här hittar du allt du behöver för ett välfungerande kontor – från
+              snygga pennor till smarta förvaringslösningar.
+            </p>
+
+            <div class="hero__actions">
+              <a href="#shop-categories" class="btn btn-primary"
+                >Utforska kategorier</a
+              >
+              <a href="#featured-products" class="btn btn-secondary"
+                >Populärt just nu</a
+              >
+            </div>
+          </div>
+
+          <aside class="hero__aside" aria-hidden="true">
+            <div class="hero-card">
+              <p class="hero-card-label">Proffstips</p>
+              <p class="hero-card-text">
+                Kombinera rätt pennor, block och pärmar för ett mer organiserat
+                kontor.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- GRID MED KORT: KATEGORIER -->
+      <section id="shop-categories" class="shop-section shop-categories">
+        <div class="l-wrapper">
+          <header class="section-header">
+            <h2>Handla efter kategori</h2>
+            <p>
+              Välj en kategori för att se alla produkter inom pennor, papper
+              eller förvaring.
+            </p>
+          </header>
+
+          <div class="category-grid">
+            <article class="category-card">
+              <a href="pennor.html" class="category-card-link">
+                <h3>Pennor</h3></a
+              >
+              <p>
+                Kulspets, fineliners, markers och blyertspennor för både vardag
+                och detaljer.
+              </p>
+              <a href="pennor.html" class="category-card-link">
+                <span class="category-cta">Visa pennor</span></a
+              >
+            </article>
+
+            <article class="category-card">
+              <a href="papper.html" class="category-card-link">
+                <h3>Papper &amp; block</h3></a
+              >
+              <p>
+                Skrivblock, anteckningsböcker och kopieringspapper i flera
+                format och kvaliteter.
+              </p>
+              <a href="papper.html" class="category-card-link">
+                <span class="category-cta">Visa papper &amp; block</span></a
+              >
+            </article>
+
+            <article class="category-card">
+              <a href="forvaring.html" class="category-card-link">
+                <h3>Förvaring</h3></a
+              >
+              <p>
+                Pärmar, lådor och smarta lösningar som hjälper dig hålla ordning
+                på kontoret.
+              </p>
+              <a href="forvaring.html" class="category-card-link">
+                <span class="category-cta">Visa förvaring</span></a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- GRID MED KORT: POPULÄRT -->
+      <section
+        id="featured-products"
+        class="shop-section shop-featured"
+        aria-label="Populära produkter"
+      >
+        <div class="l-wrapper">
+          <header class="section-header">
+            <h2>Populärt just nu</h2>
+            <p>Några av våra mest omtyckta produkter just nu.</p>
+          </header>
+
+          <div class="products-grid">
+            <article class="product-card">
+              <img
+                src="images/penna-proffs.png"
+                alt=""
+                class="product-image"
+                loading="lazy"
+                decoding="async"
+                aria-hidden="true"
+              />
+              <h3>Proffs kulspetspenna</h3>
+              <p class="product-meta">0,7 mm • Svart bläck</p>
+              <p class="product-price">19 kr</p>
+              <a href="#" class="btn btn-ghost">Läs mer</a>
+            </article>
+
+            <article class="product-card">
+              <img
+                src="images/linjerat-spiralblock.png"
+                alt=""
+                class="product-image"
+                loading="lazy"
+                decoding="async"
+                aria-hidden="true"
+              />
+              <h3>Anteckningsblock A5</h3>
+              <p class="product-meta">80 blad • Linjerat</p>
+              <p class="product-price">39 kr</p>
+              <a href="#" class="btn btn-ghost">Läs mer</a>
+            </article>
+
+            <article class="product-card">
+              <img
+                src="images/vit-forvaringslada-a4.png"
+                alt=""
+                class="product-image"
+                loading="lazy"
+                decoding="async"
+                aria-hidden="true"
+              />
+              <h3>Förvaringslåda “Ordning &amp; reda”</h3>
+              <p class="product-meta">A4 • Stapelbar</p>
+              <p class="product-price">79 kr</p>
+              <a href="#" class="btn btn-ghost">Läs mer</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- TIPS (GRID MED KORT, textbaserade) -->
+      <section class="shop-section shop-tips">
+        <div class="l-wrapper">
+          <header class="section-header">
+            <h2>Tips &amp; inspiration</h2>
+            <p>Här är några artiklar från vår nyhetssida.</p>
+          </header>
+
+          <div class="tips-grid">
+            <article class="tip-card">
+              <h3>3 pennor varje skrivbord behöver</h3>
+              <p>En snabb guide till vilka pennor som täcker det mesta.</p>
+              <a href="nyheter.html" class="text-link">Läs artikeln</a>
+            </article>
+
+            <article class="tip-card">
+              <h3>Så slipper du papperskaos</h3>
+              <p>
+                Enkla knep för att strukturera papper, kvitton och utskrifter.
+              </p>
+              <a href="nyheter.html" class="text-link">Läs artikeln</a>
+            </article>
+
+            <article class="tip-card">
+              <h3>Smart förvaring på liten yta</h3>
+              <p>Idéer för hur du maxar varje hylla, låda och yta.</p>
+              <a href="nyheter.html" class="text-link">Läs artikeln</a>
+            </article>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="site-footer">
       <div class="l-wrapper">
@@ -88,7 +271,7 @@
           <section
             class="site-footer__block"
             data-area="company"
-            aria-label="Företag"
+            aria-label="Proffs och Papper"
           >
             <div>
               <a href="./" class="brand brand--footer brand__logo">
@@ -99,11 +282,14 @@
                   height="75"
                   loading="lazy"
                   decoding="async"
+                  aria-hidden="true"
                 />
-                <span class="brand__logo-text">Proffs och Papper</span>
+                <span class="brand__logo-text" aria-hidden="true"
+                  >Proffs och Papper</span
+                >
               </a>
             </div>
-            <span class="brand__logo-sub">
+            <span class="brand__logo-sub" aria-hidden="true">
               <span class="tagline tagline--sm"
                 >Kontorsmaterial för proffs</span
               >
@@ -312,7 +498,17 @@
         </div>
         <div class="site-footer__bottom">
           <small>
-            © 2025 Proffs och Papper AB. Alla rättigheter förbehålls.</small
+            © 2025 Proffs och Papper är ett fiktivt varumärke. Webbplatsen är
+            skapad av
+            <a
+              href="https://github.com/sarasjodin"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Sara Sjödin Scolari</a
+            ><br />
+            som ett projekt för universitetsprogrammet Webbutveckling, 120 hp,
+            vid Mittuniversitetet.<br />Samtliga foton på webbplatsen är
+            AI-genererade.</small
           >
           <a class="skip-scrolling" href="#top">Till toppen</a>
         </div>

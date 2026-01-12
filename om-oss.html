@@ -16,17 +16,22 @@
     <a class="skip-link" href="#content">Hoppa till innehåll</a>
     <header class="site-header">
       <div class="l-wrapper site-header__wrapper">
-        <a href="./" class="brand brand--header brand__logo">
+        <a
+          href="./"
+          class="brand brand--header brand__logo"
+          aria-label="Proffs och Papper – Kontorsmaterial för proffs och glada vardagshjältar"
+        >
           <img
             src="images/logo.svg"
-            alt="Proffs och Papper – Kontorsmaterial för proffs och vardagshjältar"
+            alt=""
             width="100"
             height="100"
+            aria-hidden="true"
           />
-          <span class="brand__logo-text-wrap">
+          <span class="brand__logo-text-wrap" aria-hidden="true">
             <span class="brand__logo-text">Proffs och Papper</span>
 
-            <span class="brand__logo-sub">
+            <span class="brand__logo-sub" aria-hidden="true">
               <span class="tagline tagline--sm"
                 >Kontorsmaterial för proffs</span
               >
@@ -57,7 +62,7 @@
             <li><a href="./">Start</a></li>
             <li><a href="nyheter.html">Nyheter</a></li>
             <li class="has-submenu">
-              <a href="shop.html">Shop</a>
+              <a href="shop.html" id="shop-link">Shop</a>
               <button
                 class="submenu-toggle"
                 type="button"
@@ -67,7 +72,7 @@
               >
                 <span class="sr-only">Öppna undermeny</span>
               </button>
-              <ul class="submenu" id="submenu-shop" aria-labelledby="shop-link">
+              <ul class="submenu" id="submenu-shop">
                 <li><a href="pennor.html">Pennor</a></li>
                 <li><a href="forvaring.html">Förvaring</a></li>
                 <li><a href="papper.html">Papper</a></li>
@@ -79,8 +84,270 @@
         </nav>
       </div>
     </header>
-    <main class="l-wrapper" id="content">
-      <h1>Om Proffs & Papper – vårt företag och våra värderingar</h1>
+    <main id="content">
+      <!-- INTRO -->
+      <section class="hero hero--page hero--contact">
+        <div class="l-wrapper hero__inner hero__inner--with-aside">
+          <div class="hero__text">
+            <p class="hero__eyebrow">Om oss</p>
+            <h1>Kontakta Proffs & Papper</h1>
+            <p class="ingress hero__lead">
+              Med lång erfarenhet och personligt engagemang levererar vi
+              lösningar som gör skillnad.
+            </p>
+          </div>
+
+          <figure class="hero-media">
+            <img
+              src="images/hero-om-oss.png"
+              alt=""
+              decoding="async"
+              fetchpriority="high"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <!-- CONTENT-SEKTION -->
+      <section class="about-block" aria-labelledby="about-who-heading">
+        <div class="l-wrapper about-block__inner">
+          <div class="about-block__text">
+            <h2 id="about-who-heading">Vilka vi är</h2>
+            <p class="ingress">
+              Proffs och Papper i Glada Hudik är ett litet företag med stort
+              hjärta. Vi hjälper kontor att få ordning på vardagen – enkelt,
+              snabbt och med en personlig ton.
+            </p>
+          </div>
+
+          <div class="about-block__aside" aria-hidden="true">
+            <div class="about-highlight">
+              <p class="about-highlight__label">Våra värderingar</p>
+              <dl class="meta-list">
+                <dt>Enkelt</dt>
+                <dd>Det ska vara lätt att beställa.</dd>
+                <dt>Pålitligt</dt>
+                <dd>Vi håller vad vi lovar.</dd>
+                <dt>Lite roligare</dt>
+                <dd>Kontorsmaterial behöver inte vara tråkigt.</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTENT-SEKTION -->
+      <section class="about-video" aria-labelledby="logo-video-heading">
+        <div class="l-wrapper">
+          <header class="section-header">
+            <h2 id="logo-video-heading">
+              Vår logotyp – en papperstulpan med kontorshjärta
+            </h2>
+            <p>
+              En kort video om hur logotypen växte fram och varför den passar
+              Proffs och Papper.
+            </p>
+          </header>
+
+          <div class="video-card">
+            <div class="embed video-embed">
+              <iframe
+                src="https://www.youtube.com/embed/LFHGsHdY8w4?si=Ob2BCp4EqIRjx-bW"
+                title="Vår logotyp – video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <p class="video-note">
+              <strong>Tips:</strong> Gillar du också origami?
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- GRID MED KORT: TEAM -->
+      <section>
+        <div class="l-wrapper">
+          <div class="team-section about-card">
+            <h2>Människorna bakom Proffs och Papper</h2>
+            <p>
+              Här är några av oss du troligen stöter på när du handlar hos
+              Proffs och Papper:
+            </p>
+
+            <div class="team-grid">
+              <article class="team-card about-card">
+                <div class="team-media">
+                  <img
+                    width="100"
+                    height="100"
+                    src="images/anstalld1.png"
+                    alt="Amina, butikssäljare på Proffs och Papper"
+                  />
+                </div>
+                <h3>Amina</h3>
+                <p class="team-role">Butikssäljare och sortimentsguide</p>
+                <p>
+                  Hjälper dig hitta rätt penna, rätt papper – och rätt känsla.
+                  Extra plus: håller ordning på “snabba tips”-hyllan och ser
+                  till att ingen går vilse bland pärmarna.
+                </p>
+              </article>
+
+              <article class="team-card about-card">
+                <div class="team-media">
+                  <img
+                    width="100"
+                    height="100"
+                    src="images/anstalld2.png"
+                    alt="Elise, butikssäljare på Proffs och Papper"
+                  />
+                </div>
+                <h3>Elise</h3>
+                <p class="team-role">Butikssäljare och skyltning</p>
+                <p>
+                  Tar emot, visar runt och fixar smarta lösningar vid kassan.
+                  När butiken känns extra inbjudande är chansen stor att Elise
+                  varit framme med skyltar, färg och finliret.
+                </p>
+              </article>
+
+              <article class="team-card about-card">
+                <div class="team-media">
+                  <img
+                    width="100"
+                    height="100"
+                    src="images/anstalld3.png"
+                    alt="Leo, lageransvarig på Proffs och Papper"
+                  />
+                </div>
+                <h3>Leo</h3>
+                <p class="team-role">Lageransvarig och leveranshjälte</p>
+                <p>
+                  Håller koll på inleveranser, plock och pack så att rätt låda
+                  hamnar rätt – snabbt och prydligt. Bonusroll: etikettmästare
+                  och den som alltid hittar “en sista kartong” när det behövs.
+                </p>
+              </article>
+
+              <article class="team-card about-card">
+                <div class="team-media">
+                  <img
+                    width="100"
+                    height="100"
+                    src="images/anstalld5.png"
+                    alt="Mateo, arbetsmiljö och städ på Proffs och Papper"
+                  />
+                </div>
+                <h3>Mateo</h3>
+                <p class="team-role">Arbetsmiljö och butiksvård</p>
+                <p>
+                  Ser till att butiken är fräsch, trygg och trivsam – från entré
+                  till lagergång. Extra service: ansvarar för “kaffe och
+                  vatten”-stationen så att både kunder och kollegor orkar hela
+                  dagen.
+                </p>
+              </article>
+
+              <article class="team-card about-card">
+                <div class="team-media">
+                  <img
+                    width="100"
+                    height="100"
+                    src="images/anstalld8.png"
+                    alt="Sofia, kundservice på Proffs och Papper"
+                  />
+                </div>
+                <h3>Sofia</h3>
+                <p class="team-role">Kundservice och offertfixare</p>
+                <p>
+                  Den du ofta får prata med först – för beställningar, frågor
+                  och “kan ni lösa det här till imorgon?”. Bonusroll: håller
+                  koll på återkopplingar så att ingen fråga hamnar mellan
+                  stolarna.
+                </p>
+              </article>
+
+              <article class="team-card about-card">
+                <div class="team-media">
+                  <img
+                    width="100"
+                    height="100"
+                    src="images/anstalld6.png"
+                    alt="Priya, ekonomi och inköp på Proffs och Papper"
+                  />
+                </div>
+                <h3>Priya</h3>
+                <p class="team-role">Ekonomi, inköp och flöden</p>
+                <p>
+                  Har koll på siffror, inköp och att flödet funkar hela vägen
+                  från leverantör till hylla. Extra service: “retur- och
+                  reklamationskompassen” som gör det enkelt när något blir fel.
+                </p>
+              </article>
+
+              <article class="team-card about-card">
+                <div class="team-media">
+                  <img
+                    width="100"
+                    height="100"
+                    src="images/anstalld7.png"
+                    alt="Arjun, butikssäljare på Proffs och Papper"
+                  />
+                </div>
+                <h3>Arjun</h3>
+                <p class="team-role">Butikssäljare och teknikstöd</p>
+                <p>
+                  Hjälper dig jämföra produkter, hitta smart förvaring och välja
+                  rätt till mötesrummet. Bonusroll: fixar snabba etiketter,
+                  skrivare och “var tog den där varukoden vägen?”.
+                </p>
+              </article>
+
+              <article class="team-card about-card">
+                <div class="team-media">
+                  <img
+                    width="100"
+                    height="100"
+                    src="images/anstalld4.png"
+                    alt="Sofia, grundare och butiksägare på Proffs och Papper"
+                  />
+                </div>
+                <h3>Sofia</h3>
+                <p class="team-role">
+                  Grundare, butiksägare och kundlöftes-vakt
+                </p>
+                <p>
+                  Startade Proffs och Papper för att göra kontorsmaterial
+                  enklare, roligare och mer pålitligt. Extra service: hoppar in
+                  där det behövs – i kassan, på lagret eller i kundservice – och
+                  jagar alltid den där “lilla sista detaljen”.
+                </p>
+              </article>
+
+              <article class="team-card about-card">
+                <div class="team-media">
+                  <img
+                    width="100"
+                    height="100"
+                    src="images/logo.svg"
+                    alt="Proffs och Pappers logotyp"
+                  />
+                </div>
+                <h3>Du?</h3>
+                <p class="team-role">Vår framtida kollega</p>
+                <p>
+                  Vår logotyp har en gul kärna som, friställd, liknar en
+                  diamant. För oss symboliserar den varje medarbetares
+                  betydelse. Är du vår nästa diamant? Hör av dig!
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="site-footer">
       <div class="l-wrapper">
@@ -88,7 +355,7 @@
           <section
             class="site-footer__block"
             data-area="company"
-            aria-label="Företag"
+            aria-label="Proffs och Papper"
           >
             <div>
               <a href="./" class="brand brand--footer brand__logo">
@@ -99,11 +366,14 @@
                   height="75"
                   loading="lazy"
                   decoding="async"
+                  aria-hidden="true"
                 />
-                <span class="brand__logo-text">Proffs och Papper</span>
+                <span class="brand__logo-text" aria-hidden="true"
+                  >Proffs och Papper</span
+                >
               </a>
             </div>
-            <span class="brand__logo-sub">
+            <span class="brand__logo-sub" aria-hidden="true">
               <span class="tagline tagline--sm"
                 >Kontorsmaterial för proffs</span
               >
@@ -307,7 +577,17 @@
         </div>
         <div class="site-footer__bottom">
           <small>
-            © 2025 Proffs och Papper AB. Alla rättigheter förbehålls.</small
+            © 2025 Proffs och Papper är ett fiktivt varumärke. Webbplatsen är
+            skapad av
+            <a
+              href="https://github.com/sarasjodin"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Sara Sjödin Scolari</a
+            ><br />
+            som ett projekt för universitetsprogrammet Webbutveckling, 120 hp,
+            vid Mittuniversitetet.<br />Samtliga foton på webbplatsen är
+            AI-genererade.</small
           >
           <a class="skip-scrolling" href="#top">Till toppen</a>
         </div>
